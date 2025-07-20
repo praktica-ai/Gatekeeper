@@ -1,114 +1,70 @@
-.utility-page-wrap {
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  max-width: 100%;
-  height: 100vh;
-  max-height: 100%;
-  display: flex;
-}
-
-.utility-page-content {
-  text-align: center;
-  flex-direction: column;
-  width: 260px;
-  display: flex;
-}
-
-.utility-page-form {
-  flex-direction: column;
-  align-items: stretch;
-  display: flex;
-}
-
-.body {
+/* Core layout and typography */
+body {
   background-image: radial-gradient(circle closest-side, #313131, #1a1a1a);
-  min-height: auto;
-}
-
-.text-block {
-  color: #fff;
-  font-family: Inter, sans-serif;
-  font-size: 120px;
-  font-weight: 500;
-  line-height: 120px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .page-wrapper {
+  position: relative;
+  display: flex;
   flex-flow: column;
-  justify-content: flex-start;
   align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
   min-height: 100vh;
-  margin-right: 0;
   padding: 60px 0 140px 100px;
-  display: flex;
-  position: relative;
 }
 
 .logo-container {
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 50px 0;
-  font-family: Inter, sans-serif;
   display: block;
+  margin: 0 auto 50px 0;
 }
 
 .logo-text {
-  color: #fff;
-  letter-spacing: -.05em;
-  column-count: auto;
-  margin-top: 0;
-  margin-left: -8px;
+  margin: 0 0 0 -8px;
   font-size: 120px;
   font-weight: 500;
   line-height: 120px;
+  letter-spacing: -0.05em;
+  color: #fff;
 }
 
-.text-span {
+.logo-text .text-span {
   color: #ff4a4a;
 }
 
 .text-block-2 {
-  color: #fff;
-  letter-spacing: -.03em;
   margin-top: 20px;
   font-size: 20px;
   font-weight: 300;
+  letter-spacing: -0.03em;
+  color: #fff;
 }
 
 .content-container {
   width: 50%;
-  margin: 0;
 }
 
 .text-block-3 {
-  box-sizing: border-box;
-  color: #fff;
-  letter-spacing: -.03em;
-  text-indent: 0;
-  column-count: auto;
-  object-fit: fill;
-  width: auto;
-  font-family: Inter, sans-serif;
   font-size: 20px;
   font-weight: 300;
-  line-height: 140%;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  color: #fff;
 }
 
 .footer-text-container {
-  order: 0;
-  align-self: flex-end;
   position: absolute;
-  inset: auto 100px 100px auto;
+  right: 100px;
+  bottom: 100px;
 }
 
 .footer-text {
-  color: #fff;
-  font-family: Inter, sans-serif;
   font-size: 20px;
   font-weight: 300;
+  color: #fff;
 }
 
 .highlight-text {
@@ -116,58 +72,75 @@
   text-decoration: underline;
 }
 
+/* Password page */
+.utility-page-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.utility-page-content {
+  width: 260px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.utility-page-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.error-message {
+  color: #ff4a4a;
+  margin-top: 10px;
+  display: none;
+}
+
+/* Responsive tweaks */
 @media screen and (max-width: 991px) {
   .logo-text {
-    margin-bottom: 5px;
     margin-left: -5px;
+    margin-bottom: 5px;
     font-size: 80px;
     line-height: 90px;
   }
-
   .text-block-2 {
     margin-top: 10px;
     font-size: 18px;
   }
-
   .content-container {
     width: 65%;
   }
-
-  .text-block-3, .footer-text {
+  .text-block-3,
+  .footer-text {
     font-size: 18px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .page-wrapper {
-    min-height: 100vh;
     padding-top: 30px;
     padding-left: 60px;
   }
-
   .logo-text {
-    margin-bottom: 5px;
     margin-left: -4px;
     font-size: 60px;
     line-height: 70px;
   }
-
   .text-block-2 {
-    margin-top: 0;
     font-size: 14px;
   }
-
   .text-block-3 {
     font-size: 14px;
   }
-
   .footer-text-container {
-    align-self: flex-end;
-    position: absolute;
-    bottom: 60px;
     right: 50px;
+    bottom: 60px;
   }
-
   .footer-text {
     font-size: 14px;
   }
@@ -175,51 +148,38 @@
 
 @media screen and (max-width: 479px) {
   .page-wrapper {
-    align-items: flex-start;
-    min-height: 100vh;
     padding-top: 40px;
     padding-left: 20px;
+    align-items: flex-start;
   }
-
   .logo-container {
     margin-bottom: 40px;
     margin-left: 20px;
   }
-
   .logo-text {
-    margin-bottom: 5px;
     margin-left: -2px;
     font-size: 48px;
     line-height: 55px;
   }
-
   .text-block-2 {
-    margin-top: 0;
     font-size: 12px;
     line-height: 14px;
   }
-
   .content-container {
     width: 75%;
     margin-top: 20px;
     margin-left: 20px;
   }
-
   .text-block-3 {
     font-size: 12px;
   }
-
   .footer-text-container {
+    right: 5%;
+    bottom: 10%;
     text-align: right;
-    align-self: flex-end;
-    position: absolute;
-    inset: auto 5% 10% auto;
   }
-
   .footer-text {
-    text-align: right;
     font-size: 12px;
+    text-align: right;
   }
 }
-
-

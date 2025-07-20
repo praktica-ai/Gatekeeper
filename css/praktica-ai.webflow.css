@@ -133,7 +133,16 @@
     width: 65%;
   }
 
-  .text-block-3, .footer-text {
+  .text-block-3 {
+    font-size: 18px;
+  }
+
+  .footer-text-container {
+    bottom: 10%;
+    right: 5%;
+  }
+
+  .footer-text {
     font-size: 18px;
   }
 }
@@ -164,8 +173,8 @@
   .footer-text-container {
     align-self: flex-end;
     position: absolute;
-    bottom: 60px;
-    right: 50px;
+    bottom: 10%;
+    right: 5%;
   }
 
   .footer-text {

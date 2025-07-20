@@ -39,7 +39,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   margin-right: 0;
   padding: 60px 0 140px 100px;
   display: flex;
@@ -149,8 +149,9 @@
 
 @media screen and (max-width: 767px) {
   .page-wrapper {
-    min-height: 100vh;
+    min-height: 90vh;
     padding-top: 30px;
+    padding-bottom: 140px;
     padding-left: 60px;
   }
 
@@ -185,9 +186,10 @@
 @media screen and (max-width: 479px) {
   .page-wrapper {
     align-items: flex-start;
-    min-height: 100vh;
-    padding-top: 40px;
-    padding-left: 20px;
+    min-height: 85vh;
+    padding-top: 30px;
+    padding-bottom: 140px;
+    padding-left: 15px;
   }
 
   .logo-container {
@@ -209,7 +211,7 @@
   }
 
   .content-container {
-    width: 75%;
+    width: 80%;
     margin-top: 20px;
     margin-left: 20px;
   }
